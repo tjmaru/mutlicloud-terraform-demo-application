@@ -1,0 +1,13 @@
+#cloud-config
+package_upgrade: true
+packages:
+  - apache2
+write_files:
+  - path: /var/www/html/index.html
+    content: |
+      <html>
+      <h3>Hello world from <b>${cloud}</b> instance</h3>
+      </html>
+runcmd:
+  - service apache2 enable
+  - service apache2 start
