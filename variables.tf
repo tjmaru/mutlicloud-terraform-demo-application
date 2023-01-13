@@ -52,13 +52,6 @@ variable "instance_size" {
   type        = string
 }
 
-#################
-# Azure variables
-#################
-variable "resource_group_name" {
-  description = "Azure: The name of an existing resource group to be imported."
-  type        = string
-}
 ###############
 # GCP variables
 ###############
